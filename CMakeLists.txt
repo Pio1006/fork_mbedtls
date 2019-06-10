@@ -76,6 +76,6 @@ add_library(mbedtls STATIC
 )
 
 target_include_directories(mbedtls
-  PRIVATE
+  PUBLIC
     include
 )
