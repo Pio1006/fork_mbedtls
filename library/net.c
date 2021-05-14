@@ -134,7 +134,7 @@ int mbedtls_net_connect( mbedtls_net_context *ctx, const char *host, const char 
 
     /* Do name resolution with both IPv6 and IPv4 */
     memset( &hints, 0, sizeof( hints ) );
-    hints.ai_family = AF_UNSPEC;
+    hints.ai_family = AF_INET;
     hints.ai_socktype = proto == MBEDTLS_NET_PROTO_UDP ? SOCK_DGRAM : SOCK_STREAM;
     hints.ai_protocol = proto == MBEDTLS_NET_PROTO_UDP ? IPPROTO_UDP : IPPROTO_TCP;
 
